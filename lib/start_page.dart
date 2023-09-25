@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+
 
 class StartPage extends StatelessWidget {
   const StartPage({super.key});
@@ -11,7 +10,7 @@ class StartPage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Colors.blue, Colors.blue.shade300],
+            colors: [Colors.blue.shade300, Colors.blue],
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
           ),
@@ -23,13 +22,23 @@ class StartPage extends StatelessWidget {
               Image.asset(
                 'assets/images/quiz-logo.png',
                 width: 300,
+                color: Colors.white.withOpacity(0.7),
               ),
-              SizedBox(
-                height: 20,
+              const SizedBox(
+                height: 30,
               ),
-              Text(
+              const Text(
                 "Learn Flutter the Fun Way",
-                style: TextStyle(color: Colors.white54),
+                style: TextStyle(
+                    color: Color.fromARGB(250, 252, 250, 250), fontSize: 24),
+              ),
+              OutlinedButton.icon(
+                onPressed: () {},
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                ),
+                icon: const Icon(Icons.arrow_forward),
+                label: const Text("Start Quiz"),
               ),
             ],
           ),
