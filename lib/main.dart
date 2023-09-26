@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:udemy_test/homepage.dart';
+import 'package:udemy_test/quiz.dart';
 import 'package:udemy_test/start_page.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const StartPage(),
+      home: const Quiz(),
     );
   }
 }

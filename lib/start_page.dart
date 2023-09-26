@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-
 class StartPage extends StatelessWidget {
-  const StartPage({super.key});
+  const StartPage(this.switchScreenFunciton, {super.key});
+  final Function() switchScreenFunciton;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +25,18 @@ class StartPage extends StatelessWidget {
                 color: Colors.white.withOpacity(0.7),
               ),
               const SizedBox(
-                height: 30,
+                height: 50,
               ),
               const Text(
                 "Learn Flutter the Fun Way",
                 style: TextStyle(
                     color: Color.fromARGB(250, 252, 250, 250), fontSize: 24),
               ),
+              const SizedBox(
+                height: 50,
+              ),
               OutlinedButton.icon(
-                onPressed: () {},
+                onPressed: switchScreenFunciton,
                 style: OutlinedButton.styleFrom(
                   foregroundColor: Colors.white,
                 ),
@@ -47,3 +50,5 @@ class StartPage extends StatelessWidget {
     );
   }
 }
+
+
